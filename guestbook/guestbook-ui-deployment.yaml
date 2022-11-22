@@ -10,10 +10,12 @@ spec:
   selector:
     matchLabels:
       app: guestbook-ui
+      app.kubernetes.io/instance: your-argo-cd-application-name
   template:
     metadata:
       labels:
         app: guestbook-ui
+        app.kubernetes.io/instance: your-argo-cd-application-name
     spec:
       containers:
         - image: gcr.io/heptio-images/ks-guestbook-demo:0.2
