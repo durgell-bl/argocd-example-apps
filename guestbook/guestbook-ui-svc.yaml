@@ -2,12 +2,12 @@ apiVersion: v1
 kind: Service
 metadata:
   name: guestbook-ui
-  labels:
-    app.kubernetes.io/instance: your-argo-cd-application-name
+  # labels:
+  #   app.kubernetes.io/instance: your-argo-cd-application-name
 spec:
   ports:
     - port: 80
       targetPort: 80
   selector:
     app: guestbook-ui
-    app.kubernetes.io/instance: chartmuseum
+    # app.kubernetes.io/instance: your-argo-cd-application-name
